@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:8000
+
+###
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/posts
+
+###
+
+GET {{baseUrl}}/posts/test
+
+###
+
+POST {{baseUrl}}/posts
+content-type: application/json
+
+{
+  "id": "test003",
+	"title": "Next.js13 Advanced",
+	"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, culpa.",
+	"category": "Development",
+	"publisher": "Alice",
+	"image_url": "https://source.unsplash.com/collection/1346951/1000x500?sig=1",
+	"created_at": "2023-09-25T15:28:22.822Z"
+}
+
+###
+
+DELETE {{baseUrl}}/posts/test
